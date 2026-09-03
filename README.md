@@ -61,9 +61,10 @@ PyTorch baseline
 - [x] 完成 `BLOCK_SIZE=128/256/512/1024` 的受控实验
 - [x] 初始化 Git 仓库，将 M1 基线提交并推送到 `origin/main`
 - [x] 在 `experiment/vector-add-autotune` 分支完成自动调优实验
-- [ ] 提交实验分支并创建第一个 Pull Request
+- [x] 提交实验分支并创建 [Pull Request #1](https://github.com/jarvengg/llm-inference-lab/pull/1)
+- [ ] Review 并合并 Pull Request #1
 
-下一步只提交 **M1 autotune 实验分支** 并创建 Pull Request；期间不创建其他 Kernel、不安装 vLLM、不选择比赛或开源 Issue。
+下一步只 Review 并合并 **M1 autotune Pull Request**；期间不创建其他 Kernel、不安装 vLLM、不选择比赛或开源 Issue。
 
 ## 已确认的方向
 
