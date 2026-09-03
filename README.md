@@ -62,9 +62,11 @@ PyTorch baseline
 - [x] 初始化 Git 仓库，将 M1 基线提交并推送到 `origin/main`
 - [x] 在 `experiment/vector-add-autotune` 分支完成自动调优实验
 - [x] 提交实验分支并创建 [Pull Request #1](https://github.com/jarvengg/llm-inference-lab/pull/1)
-- [ ] Review 并合并 Pull Request #1
+- [x] Review 并通过 Squash 合并 Pull Request #1
+- [x] 同步本地 `main`，删除已合并的本地与远程实验分支
+- [ ] 完成 M1 知识检验，再进入下一个 Kernel
 
-下一步只 Review 并合并 **M1 autotune Pull Request**；期间不创建其他 Kernel、不安装 vLLM、不选择比赛或开源 Issue。
+下一步只完成 **M1 Vector Add 知识检验**；通过后再确定下一个 Kernel，期间不安装 vLLM、不选择比赛或开源 Issue。
 
 ## 已确认的方向
 
