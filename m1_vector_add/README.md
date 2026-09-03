@@ -61,6 +61,8 @@ GB/s = bytes_moved / elapsed_seconds / 1e9
 
 Vector Add 的计算量很小，通常是显存带宽受限问题。小尺寸时，Kernel launch 和 Python 调用开销会占主导；尺寸变大后，GB/s 才更能反映显存访问效率。
 
-## 暂不加入 autotune
+## 为什么先测固定配置，再加入 autotune
 
-这一步固定 `BLOCK_SIZE=256`。在没有固定配置的基线前直接加入 `@triton.autotune`，会混淆“理解 Kernel”和“搜索配置”两个问题。先得到可信基线，再单独比较 128、256、512、1024 或引入 autotune。
+基线阶段固定 `BLOCK_SIZE=256`，随后手动比较 128、256、512、1024，最后才加入 `@triton.autotune`。这个顺序把“Kernel 是否正确”“参数如何影响性能”“自动搜索有什么成本”拆成了三个可验证问题。
+
+当前 autotune 只搜索 `BLOCK_SIZE`，并固定 `num_warps=4`。首次遇到新的 `n_elements` 时，Triton 会运行所有候选配置并计时；相同 key 在当前进程内复用已选配置。完整实测见 [results.md](./results.md)。

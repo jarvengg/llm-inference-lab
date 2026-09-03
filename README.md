@@ -59,9 +59,11 @@ PyTorch baseline
 - [x] 原样运行已有 Vector Add，正确性误差为 0
 - [x] 将已有 Vector Add 纳入本项目，补齐多形状测试和 Benchmark
 - [x] 完成 `BLOCK_SIZE=128/256/512/1024` 的受控实验
-- [ ] 初始化项目 Git 仓库并提交 M1 可复现基线
+- [x] 初始化 Git 仓库，将 M1 基线提交并推送到 `origin/main`
+- [x] 在 `experiment/vector-add-autotune` 分支完成自动调优实验
+- [ ] 提交实验分支并创建第一个 Pull Request
 
-下一步只用 Git 固化 **M1 Vector Add**。完成后再学习 `@triton.autotune`；期间不创建其他 Kernel、不安装 vLLM、不选择比赛或开源 Issue。
+下一步只提交 **M1 autotune 实验分支** 并创建 Pull Request；期间不创建其他 Kernel、不安装 vLLM、不选择比赛或开源 Issue。
 
 ## 已确认的方向
 
